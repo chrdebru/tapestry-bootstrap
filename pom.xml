@@ -149,6 +149,14 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.7</version>
+                <configuration>
+                    <taglet>org.apache.tapestry5.javadoc.TapestryDocTaglet</taglet>
+                    <tagletArtifact>
+                    <groupId>org.apache.tapestry</groupId>                       
+                    <artifactId>tapestry-javadoc</artifactId>                       
+                    <version>5.3.8</version>                   
+                </tagletArtifact>
+            </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -276,6 +284,14 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
     </build>
 
     <repositories>      
+	    <repository>
+            <id>apache-staging</id>
+            <url>https://repository.apache.org/content/groups/staging/</url>
+        </repository>
+        <repository>
+            <id>devlab722-repo</id>
+            <url>http://nexus.devlab722.net/nexus/content/repositories/releases</url>
+        </repository>
     </repositories>
 
     <pluginRepositories>
